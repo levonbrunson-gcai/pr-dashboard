@@ -27,11 +27,11 @@ It also shows unresolved bot review threads, an "Open in Cursor" link when the P
 git clone https://github.com/levonbrunson-gcai/pr-dashboard.git
 cd pr-dashboard
 cp config.example.json config.json
-echo "LINEAR_API_KEY=lin_api_your_key" > .env
+cp .env.example .env
 npm start
 ```
 
-Open http://localhost:4321. Set `PORT` to use a different port. The server reloads when files in `src/` change.
+Add your Linear key to `.env`, then open http://localhost:4321. Set `PORT` in `.env` to use a different port. The server reloads when files in `src/` change.
 
 ## Configuration
 
