@@ -1,0 +1,8 @@
+{
+  "name": "pr-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --watch-path=src --env-file-if-exists=.env src/server.ts"
+  }
+}

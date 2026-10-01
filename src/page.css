@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light dark;
+  --border: light-dark(#d0d7de, #30363d);
+  --muted: light-dark(#59636e, #9198a1);
+  --good: light-dark(#1a7f37, #3fb950);
+  --bad: light-dark(#cf222e, #f85149);
+  --waiting: light-dark(#9a6700, #d29922);
+  color: light-dark(#1f2328, #e6edf3);
+  background: light-dark(#ffffff, #0d1117);
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 1240px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+summary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  cursor: pointer;
+}
+
+h2 {
+  display: inline;
+  margin: 0;
+  font-size: 18px;
+}
+
+.subject {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.stack {
+  margin: 12px 0 0 16px;
+}
+
+.stack summary {
+  font-weight: 600;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+ol {
+  margin: 8px 0 0;
+  padding-left: 24px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr) 8rem 8rem 15rem;
+  align-items: center;
+  gap: 12px;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+li:hover {
+  background: light-dark(#f6f8fa, #161b22);
+}
+
+li .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell {
+  min-width: 0;
+}
+
+.cell .badge {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+.badge {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+a.badge {
+  text-decoration: none;
+}
+
+a.badge:hover {
+  color: inherit;
+}
+
+.good {
+  color: var(--good);
+}
+
+.bad {
+  color: var(--bad);
+}
+
+.waiting {
+  color: var(--waiting);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.notice {
+  border: 1px solid var(--waiting);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
